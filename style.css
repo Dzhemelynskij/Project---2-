@@ -14,6 +14,8 @@ header {
   background-color: #29a6dc;
   height: 100vh;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 header > * {
@@ -27,6 +29,7 @@ header img {
 }
 
 header div.welcome {
+  z-index: 1;
   top: 7%;
   left: 5%;
   right: 5%;
@@ -90,6 +93,26 @@ header button {
   }
 }
 
+@media (orientation: portrait) and (min-width: 768px) {
+  header p {
+    font-size: 80px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  header h2 {
+    font-size: 32px;
+  }
+  header button {
+    margin-top: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+  header img {
+    right: -20%;
+  }
+}
+
 @media (orientation: landscape) {
   header img {
     height: 80%;
@@ -140,7 +163,69 @@ header button {
   }
   header img {
     right: -22%;
-    height: 95%;
+    height: 85%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+  header div.welcome {
+    text-align: left;
+    left: 6%;
+  }
+  header p {
+    font-size: 100px;
+  }
+  header h1 {
+    margin-top: 40px;
+    font-size: 50px;
+  }
+  header h2 {
+    font-size: 50px;
+  }
+  header button {
+    margin-top: 100px;
+    font-size: 38px;
+    line-height: 80px;
+    padding: 0 40px;
+    border: 2px solid white;
+  }
+  header img {
+    right: -18%;
+    height: 80%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+  header div.welcome {
+    left: 8%;
+  }
+  header p {
+    font-size: 120px;
+  }
+  header h1 {
+    margin-top: 40px;
+    font-size: 60px;
+  }
+  header h2 {
+    font-size: 60px;
+  }
+  header button {
+    line-height: 90px;
+  }
+  header img {
+    right: -8%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header button {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  header button:hover {
+    background-color: #fff;
+    color: #111;
   }
 }
 
